@@ -17,38 +17,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-    }
-
-
-
-
+        setContentView(R.layout.activity_main); }
+    ////////////////////////////////////////////
     public void alertDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);  //Make AlertDialog
         if (a.equals("number")) {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+            dialog.setTitle("     Stop!!!!");
             dialog.setMessage("ID shouldn't  only number");
-            dialog.setTitle("     Stop!!!!");
             dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
 //                        Toast.makeText(getApplicationContext(),"Chang your ID",Toast.LENGTH_LONG).show();
                 }
             });
-            AlertDialog alertDialog = dialog.create();
-            alertDialog.show();
         }if(a.equals("IdOrPass")){
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setTitle("     Stop!!!!");
-            dialog.setMessage("Id or Passord wrong");
+            dialog.setMessage("ID or Passord wrong");
             dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
 //                        Toast.makeText(getApplicationContext(),"Chang your ID",Toast.LENGTH_LONG).show();
                 }
             });
-            AlertDialog alertDialog=dialog.create();
-            alertDialog.show();
-
         }
+        AlertDialog alertDialog = dialog.create();
+        alertDialog.show();
     }
     public void Login(View view) {
 
